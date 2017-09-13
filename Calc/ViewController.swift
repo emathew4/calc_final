@@ -209,6 +209,9 @@ class ViewController: UIViewController {
         if hasDecimal && sender.currentTitle == "." {
             return
         }
+        if equationDisplay.text != "0" && equationDisplay.text!.hasSuffix(") ") {
+            return
+        }
         let lastChar = equationDisplay.text?.characters.last
         if isAlreadyTyping {
             if lastChar != ")" {
